@@ -11,3 +11,5 @@ Para inicializar o ambiente virtual foi utilizado o comando:
 Em seguida ele foi ativado:
 
 "source .venv/bin/activate"
+
+Após executar no terminal, a IDE foi aberta com "atom-beta ." e dentro do console dele o ambiente também foi ativado.
