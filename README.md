@@ -13,3 +13,7 @@ Em seguida ele foi ativado:
 "source .venv/bin/activate"
 
 Após executar no terminal, a IDE foi aberta com "atom-beta ." e dentro do console dele o ambiente também foi ativado.
+
+## Versão Python
+
+É utilizado a versão 3.7.9 neste projeto.
