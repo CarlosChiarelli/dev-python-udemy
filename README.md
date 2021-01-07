@@ -14,6 +14,8 @@ Em seguida ele foi ativado:
 
 Após executar no terminal, a IDE foi aberta com "atom-beta ." e dentro do console dele o ambiente também foi ativado.
 
+Para desativar o ambiente virtual basta "deactivate".
+
 ## Versão Python
 
-É utilizado a versão 3.7.9 neste projeto.
+É utilizado a versão 3.7.9 neste projeto em um ambiente Ubuntu 20.04.
