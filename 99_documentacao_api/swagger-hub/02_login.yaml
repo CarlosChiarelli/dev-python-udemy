@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Especificação Autenticação de usuário
+  description: Especificação Autenticação de usuário
+  contact:
+    email: ca.chiarelli.97@gmail.com
+paths:
+  /login:
+    post:
+      summary: Login do usuário
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body_request'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/body_response'
+        400:
+          description: Dados request enviados incorretos
+        401:
+          description: Password incorreto
+        500:
+          description: Erro no servidor
+components:
+  schemas:
+    body_request:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          minimum: 1
+          example: admin
+          format: email
+        password:
+          type: string
+          minimum: 1
+          example: 123
+          format: password
+    body_response:
+      type: object
+      required:
+        - token
+        - id
+        - email
+        - firstName
+        - lastName
+      properties:
+        token:
+          type: string
+          example: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJlbWFpbCI6ImF5bGFuQGJvc2Nhcmluby5 jb20iLCJwYXNzd29yZCI6InlhMGdzcWh5NHd6dnV2YjQifQ.yN_8- Mge9mFgsnYHnPEh_ZzNP7YKvSbQ3Alug9HMCsM
+        account:
+          type: string
+          example:
+            id: 1
+            email: admin@admin.com
+            firstName: First
+            lastName: Last
