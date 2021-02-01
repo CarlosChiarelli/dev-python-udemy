@@ -37,7 +37,7 @@ else:
 # else (sucesso) e finnaly (executa SEMPRE)
 try:
     print('\n\n')
-    a = 1/0
+    a = 1 / 0
 except Exception:
     print('Houve um erro')
 else:
@@ -52,3 +52,19 @@ try:
     raise ValueError('Criando um erro')
 except Exception as e:
     print(e)
+
+
+# criando EXCEÇÃO PERSONALIZADA (quando não encontrar um error parecido nativo)
+class TaErradoError(Exception):
+    pass
+
+
+def testar():
+    raise TaErradoError('Errado!')
+
+
+if __name__ == '__main__':
+    try:
+        testar()
+    except TaErradoError as e:
+        print(f'Erro: {e}')
