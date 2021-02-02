@@ -26,3 +26,22 @@ g = 'Carlos'
 val = a or b or c or d or e or f or g
 
 print(f"Operador OR: {val}")
+
+
+# como forçar tipos de dados em funções
+def funcao(p1: float, p2: str, p3: dict) -> float:
+    """Função que indica os parâmetros recebidos e o valor retornado.
+
+    Isso não afeta o códio (gerar erro), é apenas um estilo de documentação
+
+    :param p1: Float é um parâmetro.
+    :param p2: Str é um outro parâmetro.
+    :param p3: Dict é um outro parâmetro.
+    :return: Float é um número retornado.
+    """
+    print(p1, p2, p3)
+
+    return p1
+
+
+funcao(5.2, 'oi', {'Carlos': 24})
