@@ -31,3 +31,7 @@ São classes genéricas que não se deseja instanciar.
 Pode ter métodos concretos e métodos abstratos. Os métodos concretos funcionam normal como métodos simples. Já o abstrato não possui corpo, cria-se o método, o código não é escrito e então é dito que ele é abstrato para que outras classes filhas herdem e sejam obrigadas a criá-lo dentro de sí.
 
 Uma classe abstrata força que outras classes que a herdaram faça determinada coisas, criem determinados métodos obrigatoriamente.
+
+## Metaclasses
+
+São classes que criam classe.
