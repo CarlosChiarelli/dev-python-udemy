@@ -1,0 +1,13 @@
+# instalação do MariaDB no ubuntu
+# MariaDB e MySQL são praticamente a mesma coisa
+
+sudo apt-get update
+sudo apt-get install mariadb-server
+
+sudo mysql -u root
+
+USE mysql;
+UPDATE user SET plugin='' WHERE User='root';
+FLUSH PRIVILEGES;
+
+sudo apt-get install mysql-workbench
