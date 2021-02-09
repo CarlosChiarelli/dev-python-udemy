@@ -34,6 +34,7 @@ class Contato(models.Model):
     # caso o registro de uma categoria seja deletado, não quero deletar
     # registros de outra tabela ligados a ele (mas poderia)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
+    mostrar = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nome

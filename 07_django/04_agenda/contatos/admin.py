@@ -11,15 +11,13 @@ class ContatoAdmin(admin.ModelAdmin):
         'email',
         'data_criacao',
         'categoria',
+        'mostrar',
     )
-
     list_display_links = ('id', 'nome', 'sobrenome')
-
     list_filter = ('nome', 'sobrenome')
-
     list_per_page = 2
-
     search_fields = ('nome', 'sobrenome', 'telefone')
+    list_editable = ('telefone', 'mostrar')
 
 
 admin.site.register(Categoria)
